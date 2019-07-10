@@ -44,52 +44,146 @@ sn: Alex
 uid: ben
 userPassword: {SHA}nFCebWjxfaLbHHG1Qk5UU4trbvQ=
 
-dn: uid=bob,ou=people,dc=springframework,dc=org
-objectclass: top
-objectclass: person
-objectclass: organizationalPerson
-objectclass: inetOrgPerson
-cn: Bob Hamilton
-sn: Hamilton
-uid: bob
-mail: agente de seguridad
-mail: agencia lima
-userPassword: bobspassword
-
-dn: uid=amanda,ou=people,dc=springframework,dc=org
-objectclass: top
-objectclass: person
-objectclass: organizationalPerson
-objectclass: inetOrgPerson
-cn: Bob Hamilton
-sn: Hamilton
-uid: amanda
-mail: agente de seguridad
-mail: agencia provincia
-userPassword: amandaspassword
-
-dn: uid=orlando,ou=people,dc=springframework,dc=org
-objectclass: top
-objectclass: person
-objectclass: organizationalPerson
-objectclass: inetOrgPerson
-cn: Bob Hamilton
-sn: Hamilton
-uid: orlando
-mail: agente de seguridad
-mail: supervisor lima
-userPassword: orlandospassword
-
 dn: uid=kvega,ou=people,dc=springframework,dc=org
 objectclass: top
 objectclass: person
 objectclass: organizationalPerson
 objectclass: inetOrgPerson
+cn: katherine Vega
+sn: Vega
+uid: kvega
+mail: usuario regular
+mail: agencia La Molina
+userPassword: 123457
+
+dn: uid=kmacedo,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: katheleen Macedo
+sn: Macedo
+uid: kmacedo
+mail: usuario regular
+mail: agencia San Isidro
+userPassword: 123457
+
+dn: uid=karrue,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: krystell Arrue
+sn: Arrue
+uid: karrue
+mail: usuario regular
+mail: agencia Santa Raquel
+userPassword: 123457
+
+dn: uid=mcevallos,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: medalit Cevallos
+sn: Cevallos
+uid: mcevallos
+mail: usuario regular
+mail: agencia Lima
+userPassword: 123457
+
+dn: uid=oheredia,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: orlando Heredia
+sn: heredia
+uid: oheredia
+mail: operativo UTD
+mail: agencia La Molina
+userPassword: 123459
+
+dn: uid=ccampos,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: christian campos
+sn: campos
+uid: ccampos
+mail: operativo UTD
+mail: agencia San Isidro
+userPassword: 123458
+
+dn: uid=rsantos,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: ronald santos
+sn: santos
+uid: rsantos
+mail: operativo UTD
+mail: agencia Santa Raquel
+userPassword: 123457
+
+dn: uid=cbaltazar,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
 cn: Bob Hamilton
 sn: Hamilton
-uid: kvega
-mail: agente de seguridad
-userPassword: kvega
+uid: cbaltazar
+mail: operativo UTD
+mail: agencia Lima
+userPassword: 123457
+
+dn: uid=erojas,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: ernst rojas
+sn: rojas
+uid: erojas
+mail: supervisor UTD
+mail: agencia La Molina
+userPassword: 123457
+
+dn: uid=agomez,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: amanda gomez
+sn: gomez
+uid: agomez
+mail: usuario bloque
+userPassword: 123457
+
+dn: uid=ksalazar,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: kelly salazar
+sn: salazar
+uid: ksalazar
+mail: usuario bloque
+userPassword: 123457
+
+dn: uid=gvega,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: giovanna vega
+sn: vega
+uid: gvega
+mail: gestion documental
+userPassword: 123457
 
 dn: uid=joe,ou=otherpeople,dc=springframework,dc=org
 objectclass: top
