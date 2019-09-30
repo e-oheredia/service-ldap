@@ -1,7 +1,9 @@
 package com.exact.service.ldap.service;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.naming.NamingEnumeration;
 import javax.naming.NamingException;
@@ -41,7 +43,7 @@ public class AuthService {
 	
 	
 	@SuppressWarnings("unchecked")
-	public List listarGrupos(String url, String baseDn, String managerUsername, String managerPassword,
+	public List<Map<String, String>> listarGrupos(String url, String baseDn, String managerUsername, String managerPassword,
 			String filter, String password) {
 		
 		LdapContextSource ldapContextSource = definirContextoLdap(url, baseDn, managerUsername, managerPassword);
@@ -54,8 +56,8 @@ public class AuthService {
 			return null;
 		}
 		
-		return tmpl.search("", filter, new AttributesMapper() {
-
+		List valores = tmpl.search("", filter, new AttributesMapper() {
+			
 			@Override
 			public Object mapFromAttributes(Attributes attributes) throws NamingException {
 				Attribute lista = attributes.get("mail");
@@ -75,5 +77,17 @@ public class AuthService {
 								
 			}			
 		});		
+		
+		List<Map<String, String>> gruposMap = new ArrayList<>();
+		
+		valores.forEach(grupos ->{
+			((List<String>) grupos).forEach(grupo ->{
+				Map<String, String> grupoMap = new HashMap<>();
+				grupoMap.put("grupo", grupo.toString());
+				gruposMap.add(grupoMap);
+			});			
+		});
+		
+		return gruposMap;
 	}
 }

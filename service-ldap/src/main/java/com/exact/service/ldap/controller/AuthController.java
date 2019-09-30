@@ -1,6 +1,7 @@
 	package com.exact.service.ldap.controller;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -27,7 +28,7 @@ public class AuthController {
 		@RequestParam String managerUsername, @RequestParam String managerPassword,
 		@RequestParam String filter, @RequestParam String password) {
 		Response response =  new Response();
-		List lista = authService.listarGrupos(url, baseDn, managerUsername, managerPassword, filter, password);
+		List<Map<String, String>> lista = authService.listarGrupos(url, baseDn, managerUsername, managerPassword, filter, password);
 		
 		if (lista == null) {
 			response.setMensaje("Usuario no encontrado");
@@ -36,7 +37,7 @@ public class AuthController {
 		
 		if (lista.get(0) != null) {
 			response.setMensaje("Usuario encontrado");
-			response.setGrupos((List<String>) lista.get(0));
+			response.setGrupos(lista);
 			return new ResponseEntity<Response>(response, HttpStatus.OK);	
 		}
 		
@@ -47,4 +48,5 @@ public class AuthController {
 	
 
 }
+
  

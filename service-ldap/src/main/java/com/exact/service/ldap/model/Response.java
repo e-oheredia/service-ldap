@@ -2,6 +2,7 @@ package com.exact.service.ldap.model;
 
 import java.io.Serializable;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.stereotype.Component;
 
@@ -17,14 +18,14 @@ public class Response implements Serializable {
 		this.mensaje = mensaje;
 	}
 
-	public Response(String mensaje, List<String> grupos) {
+	public Response(String mensaje, List<Map<String, String>> grupos) {
 		super();
 		this.mensaje = mensaje;
 		this.grupos = grupos;
 	}
 
 	private String mensaje;
-	private List<String> grupos;
+	private List<Map<String, String>> grupos;
 	
 	public String getMensaje() {
 		return mensaje;
@@ -32,10 +33,10 @@ public class Response implements Serializable {
 	public void setMensaje(String mensaje) {
 		this.mensaje = mensaje;
 	}
-	public List<String> getGrupos() {
+	public List<Map<String, String>> getGrupos() {
 		return grupos;
 	}
-	public void setGrupos(List<String> grupos) {
+	public void setGrupos(List<Map<String, String>> grupos) {
 		this.grupos = grupos;
 	}
 	
